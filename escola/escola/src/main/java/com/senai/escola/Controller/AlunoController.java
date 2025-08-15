@@ -30,12 +30,12 @@ public class AlunoController {
     }
 
     @GetMapping ("/{id}")
-    public Aluno buscaAlunoId(Long id){
-        return alunoService.buscarAlunoId(id)
+    public Aluno buscaAlunoId(@PathVariable Long id){
+        return alunoService.buscarAlunoId(id);
     }
 
     @DeleteMapping
-    public void excluirAluno(Long id){
+    public void excluirAluno(@PathVariable Long id){
         alunoService.deletarAluno(id);
 
 
